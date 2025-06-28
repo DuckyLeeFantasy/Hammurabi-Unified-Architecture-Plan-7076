@@ -1,0 +1,66 @@
+{
+  "name": "hammurabi-unified",
+  "version": "2.0.0",
+  "description": "Unified AI-powered desktop environment with browser,agents,and file management",
+  "main": "dist/main/app.js",
+  "type": "module",
+  "homepage": "https://github.com/hammurabi-unified/app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hammurabi-unified/app.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "test": "vitest",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai",
+    "browser",
+    "agents",
+    "desktop",
+    "productivity",
+    "react",
+    "vite",
+    "local-first"
+  ],
+  "author": {
+    "name": "Hammurabi Team",
+    "email": "team@hammurabi.dev"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "framer-motion": "^10.16.16",
+    "react-icons": "^4.12.0",
+    "@questlabs/react-sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^1.0.4",
+    "electron": "^27.1.3",
+    "electron-builder": "^24.8.1",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

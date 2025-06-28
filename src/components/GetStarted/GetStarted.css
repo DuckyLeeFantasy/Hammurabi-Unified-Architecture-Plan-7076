@@ -1,0 +1,169 @@
+.getstarted-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+}
+
+.getstarted-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.getstarted-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.getstarted-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.getstarted-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.getstarted-title svg {
+  font-size: 1.5rem;
+  color: #667eea;
+}
+
+.getstarted-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.getstarted-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: scale(1.05);
+}
+
+.getstarted-content {
+  padding: 32px;
+  overflow-y: auto;
+  max-height: calc(90vh - 120px);
+}
+
+/* Quest SDK Integration Styles */
+.getstarted-content .quest-component {
+  background: transparent !important;
+  border: none !important;
+}
+
+.getstarted-content .quest-header {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.getstarted-content .quest-progress {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.getstarted-content .quest-progress-fill {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.getstarted-content .quest-content {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.getstarted-content .quest-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.getstarted-content .quest-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3) !important;
+}
+
+.getstarted-content .quest-step {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px !important;
+}
+
+.getstarted-content .quest-step-title {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.getstarted-content .quest-step-description {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.getstarted-content .quest-checkbox {
+  accent-color: #667eea !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .getstarted-container {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .getstarted-header {
+    padding: 16px 20px;
+  }
+  
+  .getstarted-content {
+    padding: 20px;
+  }
+  
+  .getstarted-title h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Animation for smooth transitions */
+.getstarted-content .quest-component {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
